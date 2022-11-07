@@ -36,17 +36,17 @@ app.controller('HomeController', function($scope) {
 });
 
 app.controller('BlogController', function($scope) {
-  $scope.message = 'Hello from BlogController';
+  $scope.message = 'Hello, I\'m under Construction';
 });
 
 app.controller('CvController', function($scope) {
-  $scope.message = 'Hello from CvController';
+  $scope.message = 'Hello, Gonna be here soon';
 });
 
 app.controller('AboutController', function($scope) {
-  $scope.message = 'Hello from AboutController';
+  $scope.message = 'Hello, I\'m under Construction';
 });
 
 app.controller('ProjectsController', function($scope) {
-  $scope.message = 'Hello from ProjectsController';
+  $scope.message = 'Hello, I\'m gonna be compiled soon';
 });
