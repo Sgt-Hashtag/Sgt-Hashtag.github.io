@@ -35,6 +35,19 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(45, 212, 191, 0.2), 0 4px 6px -2px rgba(45, 212, 191, 0.1);
         }
+        /* Style for media placeholder */
+        .media-placeholder {
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1f2937; /* Gray-800 */
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            border: 2px dashed #4b5563; /* Gray-600 */
+            color: #9ca3af; /* Gray-400 */
+            text-align: center;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -68,7 +81,7 @@
                     Solutions that Scale.
                 </h1>
                 <p class="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-8">
-                    Engineer with expertise in **applied AI, cloud-based ML systems, and robotics**. Experienced in research, prototyping, product deployment, and building production-ready, cross-functional solutions.
+                    Engineer with expertise in applied AI, cloud-based ML systems, and robotics. Experienced in research, prototyping, product deployment, and building production-ready, cross-functional solutions.
                 </p>
                 <a href="#projects" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg shadow-teal-500/30 transition duration-300 transform hover:scale-105">
                     View My Work
@@ -87,10 +100,10 @@
                 <!-- Bio -->
                 <div class="md:w-1/2">
                     <p class="text-lg text-gray-400 mb-6">
-                        I am a Robotics Systems Engineer specializing in applied **AI, Machine Learning, and Cloud-based systems**. My work focuses on bridging the gap between research and product deployment, specifically in complex domains like **quadruped locomotion (RL)** and **3D anomaly detection (NeRF/G-Splatting)**.
+                        I am a Robotics Systems Engineer specializing in applied AI, Machine Learning, and Cloud-based systems. My work focuses on bridging the gap between research and product deployment, specifically in complex domains like quadruped locomotion (RL) and 3D anomaly detection (NeRF/G-Splatting).
                     </p>
                     <p class="text-lg text-gray-400">
-                        I have experience across the entire development lifecycle, from designing prototypes in lab conditions using **ROS1/2** and **IsaacSim**, to contributing to **CI/CD pipelines** and production deployments using **Docker** and **Google Cloud**. I thrive in Agile, cross-functional teams.
+                        I have experience across the entire development lifecycle, from designing prototypes in lab conditions using ROS1/2 and IsaacSim, to contributing to CI/CD pipelines and production deployments using Docker and Google Cloud. I thrive in Agile, cross-functional teams.
                     </p>
                 </div>
                 <!-- Skills -->
@@ -119,11 +132,40 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Project Card 1: Neura Robotics Challenge -->
+                <!-- Project Card 1: Unitree A1 RL Policy Deployment -->
                 <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <div class="media-placeholder">
+                        <!-- REPLACE THIS DIV WITH YOUR VIDEO/IMAGE EMBED CODE -->
+                        <span class="text-lg">Video/Image Placeholder (Unitree A1 Demo)</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Unitree A1 RL Policy Deployment</h3>
+                    <p class="text-gray-400 mb-4">
+                        Researched and deployed an RL-based traversal strategy on a real Unitree A1 quadruped robot. Used NVIDIA IsaacLab and PyTorch for simulation training, integrating force/IMU sensors via ROS1 for deformable terrain walking and locomotion improvement.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Real Robot Deployment</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">RL & PyTorch</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">ROS1 / IsaacLab</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Terrain Classification</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
+                            <i data-lucide="github" class="lucide w-4 h-4 mr-1"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-500 transition duration-200 flex items-center cursor-default">
+                            <i data-lucide="link" class="lucide w-4 h-4 mr-1"></i> Video Link
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Neura Robotics Challenge -->
+                <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <div class="media-placeholder">
+                        <span class="text-lg">Video/Image Placeholder (Neura Challenge)</span>
+                    </div>
                     <h3 class="text-2xl font-semibold text-white mb-3">Neura Robotics Challenge</h3>
                     <p class="text-gray-400 mb-4">
-                        Worked on integrating the Neura 4ne1 humanoid robot into **IsaacLab**. Developed and applied a **deformable terrain walking algorithm** using a custom RL environment, achieving Semi-Finalist status.
+                        Worked on integrating the Neura 4ne1 humanoid robot into IsaacLab. Developed and applied a rough terrain walking algorithm using a custom RL environment, achieving Semi-Finalist status.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">RL (Reinforcement Learning)</span>
@@ -140,8 +182,36 @@
                     </div>
                 </div>
 
-                <!-- Project Card 2: RoboCup 2024 Logistics League Stack -->
+                <!-- Project Card 3: Robotic NeRF-Based Anomaly Inspection System -->
                 <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <div class="media-placeholder">
+                        <span class="text-lg">Video/Image Placeholder (NeRF Demo)</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Robotic NeRF-Based Anomaly Inspection System</h3>
+                    <p class="text-gray-400 mb-4">
+                        Developed a system for manufacturing anomaly detection by creating 3D digital twin using Neural Radiance Fields (NeRF). The project integrated Nerfstudio with ROS2 for robotic data collection and real-time processing with UR5e.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Neural Radiance Fields (NeRF)</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">ROS2</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Nerfstudio</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Computer Vision / Python</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
+                            <i data-lucide="github" class="lucide w-4 h-4 mr-1"></i> GitHub
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-500 transition duration-200 flex items-center cursor-default">
+                            <i data-lucide="link" class="lucide w-4 h-4 mr-1"></i> Research Paper
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 4th project (RoboCup) -->
+                <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <div class="media-placeholder">
+                        <span class="text-lg">Video/Image Placeholder (RoboCup Stack)</span>
+                    </div>
                     <h3 class="text-2xl font-semibold text-white mb-3">RoboCup 2024 Logistics League Stack</h3>
                     <p class="text-gray-400 mb-4">
                         Designed and built a custom SCARA robot arm and integrated a vision system using a YoloV8 architecture for detection in extreme lighting. Managed data creation and used Lua-based state machines for action control.
@@ -158,28 +228,6 @@
                         </a>
                         <a href="#" target="_blank" class="text-gray-500 transition duration-200 flex items-center cursor-default">
                             <i data-lucide="link" class="lucide w-4 h-4 mr-1"></i> Demo Video
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project Card 3: Robotic NeRF-Based Anomaly Inspection System -->
-                <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
-                    <h3 class="text-2xl font-semibold text-white mb-3">Robotic NeRF-Based Anomaly Inspection System</h3>
-                    <p class="text-gray-400 mb-4">
-                        Developed a system for manufacturing anomaly detection by creating **3D digital twins** using **Neural Radiance Fields (NeRF)**. The project integrated **nerfstudio** with **ROS2** for robotic data collection and real-time processing.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Neural Radiance Fields (NeRF)</span>
-                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">ROS2</span>
-                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Nerfstudio</span>
-                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Computer Vision / Python</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
-                            <i data-lucide="github" class="lucide w-4 h-4 mr-1"></i> GitHub
-                        </a>
-                        <a href="#" target="_blank" class="text-gray-500 transition duration-200 flex items-center cursor-default">
-                            <i data-lucide="link" class="lucide w-4 h-4 mr-1"></i> Research Paper
                         </a>
                     </div>
                 </div>
