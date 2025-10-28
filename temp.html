@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Developer Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide icons (used for simplicity) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Make sure icon rendering is reliable */
+        .lucide {
+            display: inline-block;
+            vertical-align: middle;
+            stroke-width: 2.5; /* Slightly thicker for better visibility */
+        }
+        /* Style for active navigation link on scroll */
+        .nav-link.active {
+            color: #2dd4bf; /* Tailwind teal-400 */
+            border-bottom: 2px solid #2dd4bf;
+        }
+        /* Utility for better scroll effects */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(45, 212, 191, 0.2), 0 4px 6px -2px rgba(45, 212, 191, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <a href="#" class="text-2xl font-bold text-white hover:text-teal-400 transition duration-300">
+                    YourName<span class="text-teal-400">.Dev</span>
+                </a>
+                <!-- Navigation Links -->
+                <nav class="flex space-x-6">
+                    <a href="#about" class="nav-link text-gray-400 hover:text-teal-400 transition duration-200 font-medium">About</a>
+                    <a href="#projects" class="nav-link text-gray-400 hover:text-teal-400 transition duration-200 font-medium">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-400 hover:text-teal-400 transition duration-200 font-medium">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="h-auto md:h-screen flex items-center mb-24 pt-10 md:pt-0">
+            <div class="text-center md:text-left">
+                <p class="text-teal-400 text-xl font-semibold mb-3 tracking-widest uppercase">Hi, I'm [Your Name]</p>
+                <h1 class="text-5xl sm:text-7xl font-extrabold text-white mb-4 leading-tight">
+                    Building <span class="text-teal-400">Digital Experiences</span>
+                    that Matter.
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-8">
+                    I'm a Full-Stack Developer specializing in modern web applications, focusing on scalable architecture and clean user interfaces. Let's create something amazing.
+                </p>
+                <a href="#projects" class="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg shadow-teal-500/30 transition duration-300 transform hover:scale-105">
+                    View My Work
+                    <i data-lucide="arrow-right" class="lucide w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Horizontal Divider -->
+        <div class="border-t border-gray-700 my-16"></div>
+
+        <!-- 2. About Section -->
+        <section id="about" class="py-16">
+            <h2 class="text-4xl font-bold text-white mb-10 text-center">About Me & Skills</h2>
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <!-- Bio -->
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-400 mb-6">
+                        I'm passionate about coding and solving complex problems with elegant solutions. My journey started five years ago, and since then, I've contributed to various projects, from high-traffic e-commerce platforms to bespoke internal tools. I thrive in environments where continuous learning is key.
+                    </p>
+                    <p class="text-lg text-gray-400">
+                        My philosophy is simple: write code that is readable, maintainable, and performs exceptionally well. I currently focus on the React ecosystem and cloud deployment (AWS/GCP), but I'm always eager to pick up new tools.
+                    </p>
+                </div>
+                <!-- Skills -->
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-teal-400 mb-4">Core Competencies</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">JavaScript (ES6+)</span>
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">React & Next.js</span>
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">Node.js / Express</span>
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">TypeScript</span>
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">Tailwind CSS</span>
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">Firebase / Firestore</span>
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">SQL & MongoDB</span>
+                        <span class="skill-badge bg-gray-800 text-sm font-medium text-white px-3 py-1 rounded-full border border-teal-600">Cloud Services (AWS/GCP)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontal Divider -->
+        <div class="border-t border-gray-700 my-16"></div>
+
+        <!-- 3. Projects Section -->
+        <section id="projects" class="py-16">
+            <h2 class="text-4xl font-bold text-white mb-10 text-center">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white mb-3">E-commerce Platform Redesign</h3>
+                    <p class="text-gray-400 mb-4">
+                        A full redesign and re-platforming of a major retailer's online shop, resulting in a 30% increase in conversion rates.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">React</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">TypeScript</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">GraphQL</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
+                            <i data-lucide="link" class="lucide w-4 h-4 mr-1"></i> Live Site
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-200 flex items-center">
+                            <i data-lucide="github" class="lucide w-4 h-4 mr-1"></i> Code (Private)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Real-time Chat Application</h3>
+                    <p class="text-gray-400 mb-4">
+                        A serverless chat application built for teams, featuring user authentication, public and private channels, and file sharing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Vue.js</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Firebase</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">WebSockets</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
+                            <i data-lucide="link" class="lucide w-4 h-4 mr-1"></i> Live Site
+                        </a>
+                        <a href="#" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
+                            <i data-lucide="github" class="lucide w-4 h-4 mr-1"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Data Visualization Dashboard</h3>
+                    <p class="text-gray-400 mb-4">
+                        A complex dashboard for visualizing large financial datasets using D3.js and a Python backend for data processing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Python</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">Pandas</span>
+                        <span class="text-xs bg-teal-900/50 text-teal-300 px-2 py-0.5 rounded-full">D3.js</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
+                            <i data-lucide="link" class="lucide w-4 h-4 mr-1"></i> Live Demo
+                        </a>
+                        <a href="#" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center">
+                            <i data-lucide="github" class="lucide w-4 h-4 mr-1"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center text-teal-400 hover:text-teal-300 font-bold py-3 px-6 transition duration-300 border border-teal-600 rounded-lg hover:bg-gray-800">
+                    See More Projects on GitHub
+                    <i data-lucide="external-link" class="lucide w-4 h-4 ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Horizontal Divider -->
+        <div class="border-t border-gray-700 my-16"></div>
+
+        <!-- 4. Contact Section -->
+        <section id="contact" class="py-16">
+            <h2 class="text-4xl font-bold text-white mb-10 text-center">Get In Touch</h2>
+            <div class="max-w-xl mx-auto text-center">
+                <p class="text-lg text-gray-400 mb-8">
+                    I'm currently open to new opportunities and collaboration. Whether you have a question or just want to say hi, feel free to send a message!
+                </p>
+                
+                <div class="space-y-4 md:space-y-0 md:flex md:justify-center md:space-x-8">
+                    <a href="mailto:your.email@example.com" class="block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                        <i data-lucide="mail" class="lucide w-5 h-5 mr-2 inline-block"></i> Send Email
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="block bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                        <i data-lucide="linkedin" class="lucide w-5 h-5 mr-2 inline-block"></i> LinkedIn
+                    </a>
+                </div>
+
+                <p class="text-sm text-gray-500 mt-8">
+                    Your contact information goes here. Replace placeholders with your actual details.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            &copy; <span id="year"></span> Your Name. Built with Tailwind CSS.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Dynamic Content and Interactions -->
+    <script>
+        // Set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Simple Nav Link Activation on Scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Trigger when 50% of the section is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
