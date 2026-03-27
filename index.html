@@ -56,6 +56,22 @@
             width: 100%;
             height: 100%;
         }
+        /* Fix for Lucide icons visibility - ensuring SVGs scale correctly */
+        svg.lucide {
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            display: inline-block;
+            width: 1.25rem; /* Default w-5 fallback */
+            height: 1.25rem; /* Default h-5 fallback */
+        }
+        
+        /* Logo Suffix Transition */
+        #logo-suffix {
+            transition: opacity 0.3s ease;
+        }
     </style>
 </head>
 <body class="selection:bg-teal-500/30">
@@ -63,7 +79,9 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 w-full z-50 glass-header">
         <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tighter">ABHIRUP<span class="text-teal-400">DAS</span></a>
+            <a href="#" class="text-xl font-bold tracking-tighter">
+                ABHIRUP<span id="logo-suffix" class="text-teal-400 ml-1">DAS</span>
+            </a>
             <nav class="hidden md:flex gap-10">
                 <a href="#about" class="text-sm font-medium text-gray-400 hover:text-white transition">About</a>
                 <a href="#projects" class="text-sm font-medium text-gray-400 hover:text-white transition">Projects</a>
@@ -132,8 +150,8 @@
                 </div>
             </div>
 
-            <!-- Project Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <!-- Project Grid: Reverted to 2 per row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                 
                 <!-- 1. Robotic NeRF -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
@@ -145,16 +163,16 @@
                         <p class="text-gray-400 text-sm leading-relaxed mb-6">Developed a manufacturing anomaly detection system via <span class="text-white">3D digital twins</span> using Neural Radiance Fields. Integrated with ROS2 and UR5e.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">NeRF</span>
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">ROS2</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">NeRF</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">ROS2</span>
                         </div>
 
                         <div class="flex space-x-6">
                             <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="github" class="lucide w-4 h-4 mr-2"></i> GitHub
+                                <i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub
                             </a>
                             <a href="https://www.scitepress.org/Link.aspx?doi=10.5220/0014474400004052" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="external-link" class="lucide w-4 h-4 mr-2"></i> Paper
+                                <i data-lucide="file-text" class="w-5 h-5 mr-2"></i> Paper
                             </a>
                         </div>
                     </div>
@@ -167,22 +185,22 @@
                     </div>
                     <div class="px-8 pb-10 pt-4">
                         <h3 class="text-2xl font-bold text-white mb-4">Context-Aware RAG Chatbot</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Production-ready <span class="text-white">Retrieval-Augmented Generation</span> pipeline with hybrid search and Vector DBs to eliminate hallucinations in private data sets.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Production-ready <span class="text-white">Retrieval-Augmented Generation</span> pipeline with hybrid search and Vector DBs to eliminate hallucinations.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">LANGCHAIN</span>
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">VECTOR DB</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">LANGCHAIN</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">VECTOR DB</span>
                         </div>
 
                         <div class="flex space-x-6">
                             <a href="https://github.com/Sgt-Hashtag/RAG-Project-using-VectorDB-and-Langchain" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="github" class="lucide w-4 h-4 mr-2"></i> GitHub
+                                <i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 7. VNAV SLAM -->
+                <!-- 3. VNAV SLAM -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="aspect-video overflow-hidden rounded-2xl mb-6">
                         <img src="vnav.gif" alt="VNAV SLAM" class="w-full h-full object-cover transition" onerror="this.src='https://placehold.co/800x450/111827/a5f3fc?text=SLAM+Navigation'">
@@ -192,44 +210,44 @@
                         <p class="text-gray-400 text-sm leading-relaxed mb-6">Implementation of <span class="text-white">Lidar-Visual SLAM</span> stacks on legged platforms for autonomous indoor navigation.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">SLAM</span>
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">VNAV</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">SLAM</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">VNAV</span>
                         </div>
 
                         <div class="flex space-x-6">
                             <a href="https://github.com/Sgt-Hashtag/Unitree-A1-Real-ROS" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="github" class="lucide w-4 h-4 mr-2"></i> GitHub
+                                <i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3. Unitree A1 RL -->
+                <!-- 4. Unitree A1 RL -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="video-container rounded-2xl mb-6">
                         <iframe src="https://www.youtube.com/embed/E3nrMSgy_A4" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="px-8 pb-10 pt-4">
                         <h3 class="text-2xl font-bold text-white mb-4">Unitree A1 RL Deployment</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Research and deployment of <span class="text-white">Reinforcement Learning</span> traversal strategies on real quadruped hardware. Trained via NVIDIA IsaacLab.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Research and deployment of <span class="text-white">Reinforcement Learning</span> traversal strategies on real quadruped hardware.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">PYTORCH</span>
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">ISAACLAB</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">PYTORCH</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">ISAACLAB</span>
                         </div>
 
                         <div class="flex space-x-6">
                             <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="github" class="lucide w-4 h-4 mr-2"></i> GitHub
+                                <i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub
                             </a>
                             <a href="https://youtu.be/E3nrMSgy_A4" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="youtube" class="lucide w-4 h-4 mr-2"></i> Watch
+                                <i data-lucide="youtube" class="w-5 h-5 mr-2"></i> Watch
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4. Neura Robotics -->
+                <!-- 5. Neura Robotics -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="video-container rounded-2xl mb-6">
                         <iframe src="https://www.youtube.com/embed/83TAf4fiyi8" frameborder="0" allowfullscreen></iframe>
@@ -238,66 +256,66 @@
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <h3 class="text-2xl font-bold text-white">Neura Robotics Challenge</h3>
-                                <p class="text-[10px] font-black text-teal-400/80 tracking-widest uppercase mt-1">SEMI-FINALIST</p>
+                                <p class="text-[10px] font-black text-teal-400/80 tracking-widest uppercase mt-1 mb-4">SEMI-FINALIST</p>
                             </div>
                         </div>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Integration of <span class="text-white">4ne1 Humanoid</span> into simulation environments. Developed deformable terrain walking algorithms.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Integration of <span class="text-white">4ne1 Humanoid</span> into simulation. Developed deformable terrain walking algorithms.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">HUMANOID</span>
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">RL</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">HUMANOID</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">RL</span>
                         </div>
 
                         <div class="flex space-x-6">
                             <a href="https://youtu.be/83TAf4fiyi8" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="youtube" class="lucide w-4 h-4 mr-2"></i> Watch Demo
+                                <i data-lucide="youtube" class="w-5 h-5 mr-2"></i> Watch Demo
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 5. TrailSense AI -->
+                <!-- 6. TrailSense AI -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="aspect-video overflow-hidden rounded-2xl mb-6">
                         <img src="trailsenseai.gif" alt="TrailSense AI" class="w-full h-full object-cover transition" onerror="this.src='https://placehold.co/800x450/111827/a5f3fc?text=TrailSense+AI'">
                     </div>
                     <div class="px-8 pb-10 pt-4">
                         <h3 class="text-2xl font-bold text-white mb-4">TrailSense AI</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6"><span class="text-white">Agentic routing engine</span> for athletes. NLP intent parsing + Random Forest terrain scoring for 1M+ geospatial segments.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6"><span class="text-white">Agentic routing engine</span> for athletes. NLP intent parsing + Random Forest terrain scoring for 1M+ segments.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">GEO-AI</span>
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">SCALABLE</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">GEO-AI</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">SCALABLE</span>
                         </div>
 
                         <div class="flex space-x-6">
                             <a href="https://github.com/Sgt-Hashtag/TrailsenseAI" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="github" class="lucide w-4 h-4 mr-2"></i> GitHub
+                                <i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 6. RoboCup -->
+                <!-- 7. RoboCup -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="video-container rounded-2xl mb-6">
                         <iframe src="https://www.youtube.com/embed/auQTdSbhP0Y" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="px-8 pb-10 pt-4">
                         <h3 class="text-2xl font-bold text-white mb-4">RoboCup Logistics Stack</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Custom SCARA arm design + <span class="text-white">YOLOv8 Vision architecture</span> for dynamic identification in changing environments.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Custom SCARA arm design + <span class="text-white">YOLOv8 Vision architecture</span> for identification in changing environments.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">YOLOV8</span>
-                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full">HARDWARE</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">YOLOV8</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">HARDWARE</span>
                         </div>
 
                         <div class="flex space-x-6">
                             <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="github" class="lucide w-4 h-4 mr-2"></i> GitHub
+                                <i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub
                             </a>
                             <a href="https://youtube.com/shorts/auQTdSbhP0Y" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
-                                <i data-lucide="youtube" class="lucide w-4 h-4 mr-2"></i> Watch
+                                <i data-lucide="youtube" class="w-5 h-5 mr-2"></i> Watch
                             </a>
                         </div>
                     </div>
@@ -368,7 +386,16 @@
     <!-- Scripts -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-        lucide.createIcons();
+        
+        // Logo Animation: Swapping DAS and DEV
+        const logoSuffix = document.getElementById('logo-suffix');
+        setInterval(() => {
+            logoSuffix.style.opacity = '0';
+            setTimeout(() => {
+                logoSuffix.textContent = logoSuffix.textContent === 'DAS' ? 'DEV' : 'DAS';
+                logoSuffix.style.opacity = '1';
+            }, 300);
+        }, 3000);
 
         // Canvas Interaction Script
         const canvas = document.getElementById('hero-canvas');
@@ -416,7 +443,6 @@
                 particles[i].update();
                 particles[i].draw();
                 
-                // Mouse connection
                 if (mouse.x) {
                     const dx = particles[i].x - mouse.x;
                     const dy = particles[i].y - mouse.y;
@@ -438,8 +464,16 @@
         window.addEventListener('mousemove', (e) => { mouse.x = e.x; mouse.y = e.y; });
         window.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
 
+        // Initial setup
         initCanvas();
         handleParticles();
+        
+        // Wait for script to load then create icons
+        window.addEventListener('load', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
 
         // Scroll highlight
         const observer = new IntersectionObserver((entries) => {
