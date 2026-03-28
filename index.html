@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhirup Das — Robotics & AI Engineer</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Inter font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -71,7 +69,6 @@
 </head>
 <body class="selection:bg-teal-500/30">
 
-    <!-- Header Navigation -->
     <header class="fixed top-0 w-full z-50 glass-header">
         <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
             <a href="#" class="text-xl font-bold tracking-tighter">
@@ -85,7 +82,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero" class="relative min-h-[100vh] flex flex-col justify-center overflow-hidden pt-20">
         <div class="absolute inset-0 z-0 canvas-container">
             <canvas id="hero-canvas" style="touch-action: none;"></canvas>
@@ -126,7 +122,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-32 bg-gray-950">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
@@ -138,7 +133,27 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                 
-                <!-- 1. Robotic NeRF -->
+                <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
+                    <div class="aspect-video overflow-hidden rounded-2xl mb-6">
+                        <img src="annotation_tool.gif" alt="3D Annotation Demo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/800x450/111827/a5f3fc?text=Godot+Annotation+Tool'">
+                    </div>
+                    <div class="px-8 pb-10 pt-4">
+                        <h3 class="text-2xl font-bold text-white mb-4">3D Anomaly Annotation Tool</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Built a high-fidelity simulation tool that generates <span class="text-white">auto-segmented 2D images</span> of anomalies. It captures "before and after" states, completely eliminating the need for manual 2D labeling in vision pipelines.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">Godot</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">Synthetic Data</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">CV</span>
+                        </div>
+                        <div class="flex space-x-6">
+                            <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
+                                <svg class="svg-icon mr-2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="aspect-video overflow-hidden rounded-2xl mb-6">
                         <img src="nerf_visual.jpg" alt="NeRF Visual" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.src='https://placehold.co/800x450/111827/a5f3fc?text=NeRF+System'">
@@ -163,7 +178,6 @@
                     </div>
                 </div>
 
-                <!-- 2. RAG Chatbot -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="aspect-video overflow-hidden rounded-2xl mb-6 bg-black flex items-center justify-center">
                         <img src="rag_demo.gif" alt="RAG Demo" class="w-full h-full object-cover group-hover:opacity-80 transition" onerror="this.src='https://placehold.co/800x450/111827/a5f3fc?text=RAG+Demo'">
@@ -184,7 +198,6 @@
                     </div>
                 </div>
 
-                <!-- 3. VNAV SLAM -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="aspect-video overflow-hidden rounded-2xl mb-6">
                         <img src="vnav.gif" alt="VNAV SLAM" class="w-full h-full object-cover transition" onerror="this.src='https://placehold.co/800x450/111827/a5f3fc?text=SLAM+Navigation'">
@@ -205,14 +218,13 @@
                     </div>
                 </div>
 
-                <!-- 4. Unitree A1 RL -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="video-container rounded-2xl mb-6">
                         <iframe src="https://www.youtube.com/embed/E3nrMSgy_A4" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="px-8 pb-10 pt-4">
                         <h3 class="text-2xl font-bold text-white mb-4">Unitree A1 RL Deployment</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Research and deployment of <span class="text-white">Reinforcement Learning</span> traversal strategies on real hardware.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Research and deployment of <span class="text-white">Reinforcement Learning</span> traversal strategies on real quadruped hardware.</p>
                         <div class="flex flex-wrap gap-2 mb-8">
                             <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">PYTORCH</span>
                             <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">ISAACLAB</span>
@@ -230,14 +242,14 @@
                     </div>
                 </div>
 
-                <!-- 5. Neura Robotics -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="video-container rounded-2xl mb-6">
                         <iframe src="https://www.youtube.com/embed/83TAf4fiyi8" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="px-8 pb-10 pt-4">
                         <h3 class="text-2xl font-bold text-white mb-4">Neura Robotics Challenge</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Integration of <span class="text-white">4ne1 Humanoid</span> into simulation environments. Semi-Finalist.</p>
+                        <p class="text-[10px] font-black text-teal-400/80 tracking-widest uppercase mt-1 mb-4">SEMI-FINALIST</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Integration of <span class="text-white">4ne1 Humanoid</span> into simulation. Developed deformable terrain walking algorithms.</p>
                         <div class="flex flex-wrap gap-2 mb-8">
                             <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">HUMANOID</span>
                             <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">RL</span>
@@ -251,14 +263,13 @@
                     </div>
                 </div>
 
-                <!-- 6. TrailSense AI -->
                 <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
                     <div class="aspect-video overflow-hidden rounded-2xl mb-6">
                         <img src="trailsenseai.gif" alt="TrailSense AI" class="w-full h-full object-cover transition" onerror="this.src='https://placehold.co/800x450/111827/a5f3fc?text=TrailSense+AI'">
                     </div>
                     <div class="px-8 pb-10 pt-4">
                         <h3 class="text-2xl font-bold text-white mb-4">TrailSense AI</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6"><span class="text-white">Agentic routing engine</span> for athletes. NLP intent parsing + Random Forest scoring.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6"><span class="text-white">Agentic routing engine</span> for athletes. NLP intent parsing + Random Forest terrain scoring for 1M+ segments.</p>
                         <div class="flex flex-wrap gap-2 mb-8">
                             <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">GEO-AI</span>
                             <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">SCALABLE</span>
@@ -272,11 +283,34 @@
                     </div>
                 </div>
 
+                <div class="project-card bg-gray-900 border border-white/5 p-1 rounded-3xl overflow-hidden group">
+                    <div class="video-container rounded-2xl mb-6">
+                        <iframe src="https://www.youtube.com/embed/auQTdSbhP0Y" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="px-8 pb-10 pt-4">
+                        <h3 class="text-2xl font-bold text-white mb-4">RoboCup Logistics Stack</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Custom SCARA arm design + <span class="text-white">YOLOv8 Vision architecture</span> for identification in changing environments.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">YOLOV8</span>
+                            <span class="text-[10px] font-black tracking-widest bg-teal-400/10 text-teal-400 px-3 py-1 rounded-full uppercase">HARDWARE</span>
+                        </div>
+                        <div class="flex space-x-6">
+                            <a href="https://github.com/Sgt-Hashtag" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
+                                <svg class="svg-icon mr-2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                GitHub
+                            </a>
+                            <a href="https://youtube.com/shorts/auQTdSbhP0Y" target="_blank" class="text-teal-400 hover:text-teal-300 transition duration-200 flex items-center text-sm font-semibold">
+                                <svg class="svg-icon mr-2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.14 1 12 1 12s0 3.86.42 5.58a2.78 2.78 0 0 0 1.94 2c1.71.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.86 23 12 23 12s0-3.86-.42-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                                Watch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- About / Skills -->
     <section id="about" class="py-32 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
@@ -309,12 +343,11 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="py-32 bg-gray-950">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-7xl md:text-9xl font-display font-medium text-white mb-16 tracking-tighter">Let's build.</h2>
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="mailto:abhirupdas1000@gmail.com" class="px-12 py-6 bg-white text-black font-bold rounded-full hover:bg-teal-400 transition shadow-2xl text-xl">
+                <a href="mailto:abhirupdas1000@gmail.com" class="px-12 py-6 bg-white text-black font-bold rounded-full hover:bg-teal-400 transition shadow-2xl text-xl text-center">
                     Get in Touch
                 </a>
             </div>
